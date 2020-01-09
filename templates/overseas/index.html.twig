@@ -1,0 +1,30 @@
+
+{%  extends 'base.html.twig' %}
+
+{%  block title %}Hotels{% endblock %}
+{% block body %}
+    <h1>Hotels</h1>
+    {% if hotel %}
+        
+            
+                {% for hotels in hotel %}
+                <div class="hotel mb-2">
+                    <div class="row">
+                        <div class="col-md-3 hotel__image">
+                            <img src="" alt="" class="src">
+                        </div>
+                        <div class="col-md-9">
+                            <h3 class="hotel__name">{{hotels.name}}</h3>
+                            <span class="spacer">|</span>
+                            <span class="hotel__rating">{{hotels.rating}}</span>
+                            <p>{{hotels.address}}</p>
+                        </div>
+                    </div>
+                </div>  
+                {% endfor %}
+          
+    {% else %}
+        <p>No search results</p>
+    {% endif %}
+    
+{% endblock %}
