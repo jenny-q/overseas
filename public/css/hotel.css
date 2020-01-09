@@ -1,0 +1,56 @@
+.hotel {
+    border: 1px solid #ccc;
+    position: relative;
+}
+.hotel__name {
+    color:#45b3e0 ;
+    display: inline-block;
+}
+.hotel__button {
+    background-color: #fdb353;
+    border: none;
+    position: absolute;
+    top: 100px;
+    left: 27%;
+}
+.hotel__button img {
+    vertical-align: sub;
+}
+.hotel__price--start {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 2rem;
+}
+.currency {
+    vertical-align: top;
+}
+.tax {
+    font-size: .9rem;
+}
+.hotel__badge {
+	min-width: 70px;
+	height: 100px;
+    background: rgb(140,139,140);
+    background: linear-gradient(90deg, rgba(140,139,140,1) 12%, rgba(103,103,103,1) 50%, rgba(99,99,99,1) 100%);
+    color: #fff;
+    font-size: .9rem;
+	position: relative;
+}
+
+.hotel__badge:before,
+.hotel__badge:after {
+	content: "";
+	position: absolute;
+	left: 0;
+	border-left: 20px solid #fff;
+}
+
+.hotel__badge:before {
+	top: 0;
+	border-bottom: 20px solid #8c8b8c;
+}
+
+.hotel__badge:after {
+	bottom: 0;
+	border-top: 20px solid #8c8b8c;
+}

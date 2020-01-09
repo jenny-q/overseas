@@ -8,17 +8,37 @@
         
             
                 {% for hotels in hotel %}
-                <div class="hotel mb-2">
+                <div class="hotel mb-4 p-4">
                     <div class="row">
                         <div class="col-md-3 hotel__image">
                             <img src="" alt="" class="src">
                         </div>
-                        <div class="col-md-9">
-                            <h3 class="hotel__name">{{hotels.name}}</h3>
-                            <span class="spacer">|</span>
+                        <div class="col-md-7">
+                            <h5 class="hotel__name">{{hotels.name}}</h5>
+                            <span class="spacer pr-1 pl-1">|</span>
                             <span class="hotel__rating">{{hotels.rating}}</span>
                             <p>{{hotels.address}}</p>
+                            
                         </div>
+                        <div class="col-md-2 hotel__price">
+                            <div class="hotel__badge text-right p-2">
+                                <div class="content">
+                                    <p class="text m-0">starting at</p class="text">
+                                    <span class="currency">USD</span>
+                                    <span class="hotel__price--start">{{hotels.price}}</span>
+                                    <p class="text">per room/night</p>
+                                </div>
+                            </div>
+                            <p class="tax dark m-0 text-right ">*Taxes Not Included</p>
+                        </div>
+                        <a class="btn btn-primary hotel__button" data-toggle="collapse" href="#slide{{hotels.id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <img src="https://img.icons8.com/android/20/ffffff/sort-down.png"> Rooms / Availability
+                          </a>
+                          <div class="multi-collapse collapse" id="slide{{hotels.id}}">
+                            <div class="card-body">
+                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                            </div>
+                          </div>
                     </div>
                 </div>  
                 {% endfor %}

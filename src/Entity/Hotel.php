@@ -41,6 +41,11 @@ class Hotel
      */
     private $room;
 
+    /**
+     * @ORM\Column(name="image", type="string", length=255, unique=true)
+     */
+    private $image;
+
      /**
      * @ORM\Column(name="roomPrice", type="integer", length=255, unique=false)
      */
