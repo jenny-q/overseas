@@ -34,10 +34,16 @@ class HotelController extends AbstractController
     //   $hotel->setAddress('2001 Collins Ave, Miami Beach, USA');
     //   $hotel->setPrice(593);
     //   $hotel->setRating(4);
-    //   $hotel->setRoom('Balcony suite with ocean view');
-    //   $hotel->setRoomPrice(610);
+    //   $hotel->setRoomA('King Bed Apartment with ocean view');
+    //   $hotel->setRoomPriceA(593);
+    //   $hotel->setRoomB('Queen Bedroom with partial ocean view');
+    //   $hotel->setRoomPriceB(535);
+    //   $hotel->setRoomC('Twin Bed Studio with street view');
+    //   $hotel->setRoomPriceC(500);
+    //   $hotel->setImage('images.unsplash.com/photo-1551882547-ff40c63fe5fa');
+    //   $hotel->setPromo('Free night when you book 5 nights');
     //   $entityManager->persist($hotel);
     //   $entityManager->flush();
     //   return new Response('Saved a hotel with the id of  '.$hotel->getId());
-    // }
+    //}
 }

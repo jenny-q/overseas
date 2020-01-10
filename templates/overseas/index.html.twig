@@ -5,13 +5,11 @@
 {% block body %}
     <h1>Hotels</h1>
     {% if hotel %}
-        
-            
                 {% for hotels in hotel %}
                 <div class="hotel mb-4 p-4">
                     <div class="row">
                         <div class="col-md-3 hotel__image">
-                            <img src="" alt="" class="src">
+                            <img src="https://{{hotels.image}}" alt="{{hotels.name}}" class="img-fluid">
                         </div>
                         <div class="col-md-7">
                             <h5 class="hotel__name">{{hotels.name}}</h5>
@@ -31,16 +29,21 @@
                             </div>
                             <p class="tax dark m-0 text-right ">*Taxes Not Included</p>
                         </div>
+                        
                         <a class="btn btn-primary hotel__button" data-toggle="collapse" href="#slide{{hotels.id}}" role="button" aria-expanded="false" aria-controls="collapseExample">
                             <img src="https://img.icons8.com/android/20/ffffff/sort-down.png"> Rooms / Availability
-                          </a>
-                          <div class="multi-collapse collapse" id="slide{{hotels.id}}">
-                            <div class="card-body">
-                              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
-                            </div>
+                        </a>
+
+                        <div class="multi-collapse collapse mt-3 col-md-12" id="slide{{hotels.id}}">
+                            {% block room %}
+                                {{ include('hotels/rooms.html.twig') }}
+                            {% endblock %}
                           </div>
                     </div>
-                </div>  
+                </div>
+                    {% block modal %}
+                        {{ include('hotels/contact.html.twig') }}
+                    {% endblock %}
                 {% endfor %}
           
     {% else %}

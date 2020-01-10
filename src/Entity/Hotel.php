@@ -37,9 +37,19 @@ class Hotel
     private $rating;
 
     /**
-     * @ORM\Column(name="room", type="string", length=255, unique=true)
+     * @ORM\Column(name="roomA", type="string", length=255, unique=true)
      */
-    private $room;
+    private $roomA;
+
+    /**
+     * @ORM\Column(name="roomB", type="string", length=255, unique=true)
+     */
+    private $roomB;
+
+    /**
+     * @ORM\Column(name="roomC", type="string", length=255, unique=true)
+     */
+    private $roomC;
 
     /**
      * @ORM\Column(name="image", type="string", length=255, unique=true)
@@ -47,9 +57,24 @@ class Hotel
     private $image;
 
      /**
-     * @ORM\Column(name="roomPrice", type="integer", length=255, unique=false)
+     * @ORM\Column(name="roomPriceA", type="integer", length=255, unique=false)
      */
-    private $roomPrice;
+    private $roomPriceA;
+
+    /**
+     * @ORM\Column(name="roomPriceB", type="integer", length=255, unique=false)
+     */
+    private $roomPriceB;
+
+    /**
+     * @ORM\Column(name="roomPriceC", type="integer", length=255, unique=false)
+     */
+    private $roomPriceC;
+
+    /**
+     * @ORM\Column(name="promo", type="string", length=255, unique=false)
+     */
+    private $promo;
 
 
     public function getId(): ?int
@@ -83,18 +108,56 @@ class Hotel
     public function setRating($rating) {
         $this->rating = $rating;
     }
-    public function getRoomPrice(): ?int
+    public function getRoomPriceA(): ?int
     {
-        return $this->roomPrice;
+        return $this->roomPriceA;
     }
-    public function setRoomPrice($roomPrice) {
-        $this->roomPrice = $roomPrice;
+    public function setRoomPriceA($roomPriceA) {
+        $this->roomPriceA = $roomPriceA;
     }
-    public function getRoom() {
-        return $this->room;
+    public function getRoomPriceB(): ?int
+    {
+        return $this->roomPriceB;
     }
-    public function setRoom($room) {
-        $this->room = $room;
+    public function setRoomPriceB($roomPriceB) {
+        $this->roomPriceB = $roomPriceB;
+    }
+    public function getRoomPriceC(): ?int
+    {
+        return $this->roomPriceC;
+    }
+    public function setRoomPriceC($roomPriceC) {
+        $this->roomPriceC = $roomPriceC;
+    }
+    public function getRoomA() {
+        return $this->roomA;
+    }
+    public function setRoomA($roomA) {
+        $this->roomA = $roomA;
+    }
+    public function getRoomB() {
+        return $this->roomB;
+    }
+    public function setRoomB($roomB) {
+        $this->roomB = $roomB;
+    }
+    public function getRoomC() {
+        return $this->roomC;
+    }
+    public function setRoomC($roomC) {
+        $this->roomC = $roomC;
+    }
+    public function getImage() {
+        return $this->image;
+    }
+    public function setImage($image) {
+        $this->image = $image;
+    }
+    public function getPromo($promo) {
+        return $this->promo;
+    }
+    public function setPromo($promo) {
+        $this->promo = $promo;
     }
 
 }
